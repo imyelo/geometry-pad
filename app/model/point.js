@@ -47,6 +47,7 @@ define(function (require, exports, module) {
       _.defaults((options = options || {}), {
         silence: false
       });
+      this.getElement().remove();
       if (!options.silence) {
         this.emit('remove', this);
       }

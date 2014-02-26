@@ -5,4 +5,10 @@ svg {
 
 .point {
   cursor: pointer;
+  fill: #666;
+}
+
+.segment {
+  stroke: #666;
+  stroke-width: 3;
 }

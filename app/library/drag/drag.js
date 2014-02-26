@@ -80,8 +80,8 @@ define(function (require, exports, module) {
         if (isDragging) {
           pageXY = getPageXY(e);
           if (typeof pageXY.x !== 'undefined' && typeof pageXY.y !== 'undefined') {
-            x = pageXY.x - last.x + (+element.getAttribute('cx'));
-            y = pageXY.y - last.y + (+element.getAttribute('cy'));
+            x = pageXY.x - last.x;
+            y = pageXY.y - last.y;
             last = pageXY;
             each(onMove, function (func) {
               func.call(this, x, y, e);
@@ -96,8 +96,8 @@ define(function (require, exports, module) {
           isDragging = false;
           pageXY = getPageXY(e);
           if (typeof pageXY.x !== 'undefined' && typeof pageXY.y !== 'undefined') {
-            x = pageXY.x - last.x + (+element.getAttribute('cx'));
-            y = pageXY.y - last.y + (+element.getAttribute('cy'));
+            x = pageXY.x - last.x;
+            y = pageXY.y - last.y;
             last = pageXY;
             each(onEnd, function (func) {
               func.call(this, x, y, e);

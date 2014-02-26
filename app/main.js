@@ -3,5 +3,7 @@ define(function (require, exports, module) {
   var paper = new Paper();
   document.querySelector('main').appendChild(paper.getElement());
   window.paper = paper;
-  window.point = paper.createPoint(3, 5);
+  var m = window.m = paper.createPoint(5, 5);
+  var n = window.n = paper.createPoint(30, 30);
+  window.segment = paper.createSegment(m, n);
 });
